@@ -4,13 +4,19 @@ const router = express.Router();
 // creo la constater route de tipo express.Router 
 
 router.get('/',(req,res)=>{
-    res.send('Inicio');
+    const inicio = 'Somos una empresa dedicada a ...';
+    res.render('inicio', {
+        inicio
+    });
 });
 router.get('/nosotros',(req,res)=>{
-    res.render('nosotros');
+    const proyectos = 'proyecto Node';
+    res.render('nosotros',{
+        parametro : proyectos
+    });
 });
 router.get('/contacto',(req,res)=>{
-    res.send('Contacto');
+    res.render('contacto');
 });
 
 export default router;
