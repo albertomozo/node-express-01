@@ -1,11 +1,14 @@
 import express from 'express';
 import router from './routes/index.js';
+import path from 'path';
 // importo las rutas del fichero route.js
 
 const app = express();
 // definir puerto
 const port = process.env.PORT ||4000;
+const __dirname = path.resolve();
 // Agregar riouter 
+app.set('views', __dirname + '/views')
 app.use('/',router);
 // Agregamo el usos de templates pug 
 app.set('view engine','pug');
