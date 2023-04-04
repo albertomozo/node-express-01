@@ -1,0 +1,22 @@
+header {
+    background-color: black;
+    color : white;
+    display : flex;
+
+}
+#logo {
+    width : 70px;
+}
+#logo img {
+    border-radius: 50%;
+    width : 100%
+}
+#titulo {
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    background-color: black;
+    color : white;
+}

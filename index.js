@@ -7,7 +7,10 @@ const app = express();
 const port = process.env.PORT ||4000;
 // Agregar riouter 
 app.use('/',router);
+// Agregamo el usos de templates pug 
 app.set('view engine','pug');
+// agregamos uso de ficheros estáticos
+app.use(express.static('public'))
 
 
 app.listen(port, () => {
